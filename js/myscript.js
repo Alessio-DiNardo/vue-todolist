@@ -32,6 +32,10 @@ createApp({
             newElement: "",
             
         }
+    },
+
+    methods: {
+
     }
     
 }).mount('#app');

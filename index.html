@@ -11,7 +11,31 @@
     <!-- Vue 3 -->
     <script src="https://unpkg.com/vue@3"></script>
 
+<div id="app">
+    <header>
+        <h1>
+            Lista della spesa
+        </h1>
+    </header>
 
+    <main>
+        <div class="todo-list">
+            <ul>
+                <li v-for="todoItem in todoList">
+                    {{todoItem.text}}
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="./js/myscript.js"></script>
+</div>
 
 
 
