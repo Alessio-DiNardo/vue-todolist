@@ -21,7 +21,7 @@
     <main>
         <div class="todo-list">
             <ul>
-                <li v-for="todoItem in todoList">
+                <li v-for="(todoItem, index) in todoList" :class="index === barredIndex ? 'barred' : ''">
                     {{todoItem.text}}
                 </li>
             </ul>

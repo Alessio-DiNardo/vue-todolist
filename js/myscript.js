@@ -39,7 +39,9 @@ createApp({
         //? dovrò creare una funzione che determina che done true mi sbarri le parole
 
         barredText(){
-            if(todoList.done === "true")
+            if(todoList.done === "true"){
+                todoList.text === "barred"
+            }
         }
         
     },
