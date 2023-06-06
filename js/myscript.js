@@ -36,6 +36,12 @@ createApp({
 
     methods: {
 
-    }
+        //? dovrò creare una funzione che determina che done true mi sbarri le parole
+
+        barredText(){
+            if(todoList.done === "true")
+        }
+        
+    },
     
 }).mount('#app');
