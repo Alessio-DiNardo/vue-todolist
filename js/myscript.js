@@ -2,7 +2,14 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'Hello Vue!',
+            todoList: [
+                "pasta",
+                "riso",
+                "latte",
+                "uova",
+                "cioccolato",
+                "cereali",
+            ]
             
         }
     }
