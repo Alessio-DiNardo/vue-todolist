@@ -36,14 +36,21 @@ createApp({
 
     methods: {
 
-        //? dovrò creare una funzione che determina che done true mi sbarri le parole
+        addNewTodoList(todoElement){
+            if (this.newElement !== ""){
+                this.todoList.push(todoElement);
+                this.newElement = "";
+            }
+        },
 
-        barredText(){
-            if(todoList.done === "true"){
-                todoList.text === "barred"
+        removedNewTodoList(todoElementIndex){
+            if (todoElementIndex >= this.todoList.length || todoElementIndex < 0){
+
+            }else {
+                const removeElement = this.todoList.splice(todoElementIndex, 1);
+                this.removedNewTodoList.push(removeElement);
             }
         }
-        
     },
     
 }).mount('#app');

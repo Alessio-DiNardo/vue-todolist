@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=ù, initial-scale=1.0">
     <title>Vue todolist</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Vue 3 -->
@@ -21,10 +22,19 @@
     <main>
         <div class="todo-list">
             <ul>
-                <li v-for="(todoItem, index) in todoList" :class="index === barredIndex ? 'barred' : ''">
+                <li v-for="(todoItem, index) in todoList">
                     {{todoItem.text}}
                 </li>
+                <span>
+                    <i class="fa-solid fa-x"></i>
+                </span>
             </ul>
+        </div>
+        <div class="input-text">
+            <input type="text" v-model="newElement" @keyup.enter="addNewTodoList(newElement)" >
+            <button class="list-adder" @click="addNewTodoList(newElement)">
+                add new item
+            </button>
         </div>
     </main>
 

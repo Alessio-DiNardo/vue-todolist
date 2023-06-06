@@ -20,3 +20,8 @@ ul li{
 .barred{
     text-decoration: line-throughES;
 }
+
+div.input-text{
+    width: 70%;
+    text-align: center;
+}
