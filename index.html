@@ -24,10 +24,11 @@
             <ul>
                 <li v-for="(todoItem, index) in todoList">
                     {{todoItem.text}}
+                    <span class="simbol">
+                        <i class="fa-solid fa-x"></i>
+                    </span>
                 </li>
-                <span>
-                    <i class="fa-solid fa-x"></i>
-                </span>
+                
             </ul>
         </div>
         <div class="input-text">

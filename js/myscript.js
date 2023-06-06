@@ -48,7 +48,7 @@ createApp({
 
             }else {
                 const removeElement = this.todoList.splice(todoElementIndex, 1);
-                this.removedNewTodoList.push(removeElement);
+                this.todoList.splice(todoElementIndex, 1);
             }
         }
     },
