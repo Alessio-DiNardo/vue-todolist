@@ -23,8 +23,10 @@
         <div class="todo-list">
             <ul>
                 <li v-for="(todoItem, index) in todoList">
-                    {{todoItem.text}}
-                    <span class="simbol">
+                    <span class="todo-wrapper" :class="todoItem.done ? 'done' : ''">
+                        {{todoItem.text}}
+                    </span>
+                    <span @click="removedNewTodoList(index)">
                         <i class="fa-solid fa-x"></i>
                     </span>
                 </li>

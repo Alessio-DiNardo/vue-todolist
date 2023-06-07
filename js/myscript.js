@@ -5,27 +5,27 @@ createApp({
             todoList: [
                 {
                     text: "pasta",
-                    done: "true",
+                    done: true,
                 },
                 {
                     text: "pollo",
-                    done: "false",
+                    done: false,
                 },
                 {
                     text: "riso",
-                    done: "false",
+                    done: false,
                 },
                 {
                     text: "latte",
-                    done: "false",
+                    done: false,
                 },
                 {
                     text: "cioccolata",
-                    done: "true",
+                    done: true,
                 },
                 {
                     text: "uova",
-                    done: "true",
+                    done: true,
                 }
                 
             ],
@@ -38,7 +38,10 @@ createApp({
 
         addNewTodoList(todoElement){
             if (this.newElement !== ""){
-                this.todoList.push(todoElement);
+                this.todoList.push({
+                    text: todoElement,
+                    done: false
+                });
                 this.newElement = "";
             }
         },
@@ -48,7 +51,7 @@ createApp({
 
             }else {
                 const removeElement = this.todoList.splice(todoElementIndex, 1);
-                this.todoList.splice(todoElementIndex, 1);
+                this.todoList.splice(todoElementIndex, 1)[0];
             }
         }
     },

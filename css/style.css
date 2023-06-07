@@ -17,11 +17,11 @@ ul li{
     text-align: center;
 }
 
-.barred{
-    text-decoration: line-throughES;
-}
-
 div.input-text{
     width: 70%;
     text-align: center;
+}
+
+span.todo-wrapper.done{
+    text-decoration: line-through;
 }
